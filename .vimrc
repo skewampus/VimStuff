@@ -1,3 +1,13 @@
+" Vim Plug {{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+" }}}
+
+call plug#begin()
+
 " Visuals {{{
 
         colorscheme badwolf
@@ -208,13 +218,15 @@ autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --
 " .vimrc fold settings {{{
 
         " tell vim to fold sections by markers, rather than indentation
-        foldmethod=marker
+ "       foldmethod=marker
         " Then we want it to close every fold by default so that we have this high level view when we open our vimrc.
-        foldlevel=0
+ "       foldlevel=0
         " Now, this is a file-specific setting, so we can use a modeline to make Vim only use these settings for this file. Modelines are special comments somewhere in a file that can can declare certain Vim settings to be used only for that file. So we'll tell Vim to check just the final line of the file for a modeline.
         set modelines=1
 
 " }}}
+
+call plug#end()
 
 " echo "MY VIMRC LOADED"
 " let myVar = "MY VIMRC LOADED"
