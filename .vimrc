@@ -10,7 +10,6 @@ call plug#begin()
 
 " Visuals {{{
 
-        colorscheme badwolf
         syntax enable  " syntax processing
         set number      " line numbers
         set showcmd     " show command in bottom bar
@@ -228,6 +227,8 @@ autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --
 " }}}
 
 call plug#end()
+
+:colorscheme badwolf
 
 " echo "MY VIMRC LOADED"
 " let myVar = "MY VIMRC LOADED"
