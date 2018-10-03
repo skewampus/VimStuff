@@ -21,11 +21,12 @@ call plug#begin()
         set showmatch " highlight matching [{()}]
         nnoremap <leader>u :GundoToggle<CR> " Uber Undo
 
+
 " }}}
 " Tabbing {{{
 
-        settabstop=4 " tab to spaces
-        setsofttabstop=4 " tab to spaces while editing
+        set tabstop=4 " tab to spaces
+        set softtabstop=4 " tab to spaces while editing
         set expandtab " tabs are spaces
 
 " }}}
@@ -185,8 +186,8 @@ Plug 'mattn/emmet-vim'          " Build HTML text with CSS Selectors
             \      'extends' : 'jsx',
             \  },
           \}
-        " HowTo {{{
-                Give it a try: in insert mode, type p.description, and then hit Tab-, (without leaving insert mode). It will expand as <p className="description"></p>. Note that this is using the JSX className syntax, thanks to the tweak on user_emmet_settings.
+        "" HowTo {{{
+        "        Give it a try: in insert mode, type p.description, and then hit Tab-, (without leaving insert mode). It will expand as <p className="description"></p>. Note that this is using the JSX className syntax, thanks to the tweak on user_emmet_settings.
         " }}}
 " }}}
 
